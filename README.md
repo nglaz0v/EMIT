@@ -15,24 +15,12 @@ This example was tested with the following environment. However, it should work 
 - Following instruction from [miniconda](https://docs.conda.io/en/latest/miniconda.html) to install Python.
 - Use the following command to install required packages.
 ```bash
-# Install with GPU support. Check https://pytorch.org for more information. 
-#+The following cmd install PyTorch compiled with cuda 118. 
-pip install torch --index-url https://download.pytorch.org/whl/cu118
-
-# If GPU not available, install the PyTorch compiled for CPU.
-pip install torch --index-url https://download.pytorch.org/whl/cpu
-
-# Install transformers, tokenizers and prettytable
-pip install transformers==4.28.1 tokenizers==0.13.3 prettytable
+pip install -r requirements.txt
 ```
 
 - The installation process will take about an hour. This heavily depends on your network bandwidth.
 
 ## Demo
-- Clone `EMIT` locally from Github.
-```bash
-git clone https://github.com/deeplearningplus/EMIT.git
-```
 - Instructions to run on data:
 ```bash
 # Run on GPU
@@ -46,12 +34,12 @@ The pretrained model will be saved in `model-example` when the above command fin
 We uploaded a pretrained model in `model` for this tutorial.
 
 - Linear projection from the pretrained model
-```python
+```bash
 # Run on GPU
-bash pretrain_gpu.sh
+bash linear_probe_gpu.sh
 
 # Run on CPU
-bash pretrain_cpu.sh
+bash linear_probe_cpu.sh
 ```
 
 The outputs include log file `log.txt`, checkpoint of the linear classification at each epoch and prediction probabilities on the testing set.
