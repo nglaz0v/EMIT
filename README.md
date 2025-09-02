@@ -1,4 +1,13 @@
-# EMIT: End-Motif Inspection via Transformer.
+# EMIT: End-Motif Inspection via Transformer
+
+![EMIT_overview](EMIT_overview.png)
+A ﬂowchart depicting the development and validation of EMIT:
+- (a) An exemplar illustrating cfDNA and its 4-mer end-motif.
+- (b) Construction of end-motif sequence from sequencing reads.
+- (c) The archietecture of EMIT.
+- (d) Linear projection of end-motif sequence representations from EMIT for diagnosis of cancer.
+
+---
 
 ## Introduction
 End-motif of plasma cell-free DNA (cfDNA) is a fragmentomic marker for cancer diagnosis. Here, we presented a self-supervised learning approach – end-motif inspection via transformer (EMIT) – that learns feature represenations of cfDNA end-motifs. We demonstrated that high classification performance in the identification of cancer via linear projection of features extracted from pretrained EMIT.   
